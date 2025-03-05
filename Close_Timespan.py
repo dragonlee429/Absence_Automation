@@ -54,12 +54,12 @@ def get_today_timespan():
         return None
 
 def edit_start_time_random():
-    """오늘 퇴근 시간을 17시 00분에서 17분 사이의 랜덤 시간으로 수정"""
+    """오늘 퇴근 시간을 17시 00분에서 15분 사이의 랜덤 시간으로 수정"""
 
     timespan_id = get_today_timespan()
 
     # 17시 00분에서 17분 사이의 랜덤한 분을 생성
-    random_minute = random.randint(00, 17)
+    random_minute = random.randint(00, 15)
 
     # 현재 시간에서 17시 00분부터 17분 사이의 랜덤 시간으로 설정 (타임존 반영)
     new_end_time = datetime.datetime.now(tz).replace(hour=17, minute=random_minute, second=0, microsecond=0)
