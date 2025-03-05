@@ -58,10 +58,10 @@ def edit_start_time_random():
 
     timespan_id = get_today_timespan()
 
-    # 17시 00분에서 17분 사이의 랜덤한 분을 생성
+    # 17시 00분에서 15분 사이의 랜덤한 분을 생성
     random_minute = random.randint(00, 15)
 
-    # 현재 시간에서 17시 00분부터 17분 사이의 랜덤 시간으로 설정 (타임존 반영)
+    # 현재 시간에서 17시 00분부터 15분 사이의 랜덤 시간으로 설정 (타임존 반영)
     new_end_time = datetime.datetime.now(tz).replace(hour=17, minute=random_minute, second=0, microsecond=0)
 
     # UTC로 변환 후 ISO 8601 형식으로 변환하고, 밀리초 및 Z 추가
