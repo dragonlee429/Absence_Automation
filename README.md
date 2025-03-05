@@ -3,6 +3,8 @@
 * 우측 상단 프로필 - Show Profile - Integration
 * Generate API Key
 
+
+
 **# 자동화 방법**
 * 파이썬 가상환경에서 requests, pytz, mohawk 등 라이브러리 설치
 * pip install pyinstaller 로 pyinstaller 인스톨
