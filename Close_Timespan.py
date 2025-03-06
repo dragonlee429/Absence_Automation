@@ -10,7 +10,6 @@ BASE_URL = "https://app.absence.io/api/v2"
 API_KEY = "{Your API ID}"
 API_SECRET = "{Your API Key}"
 TIMEZONE = "Europe/Berlin"
-TIMEZONE_OFFSET = "+0100"
 
 # 현재 시간 (유럽 중앙 시간 설정)
 tz = pytz.timezone("Europe/Berlin")
@@ -71,7 +70,7 @@ def edit_start_time_random():
     data = {
         "end": new_end_time_str,
         "timezoneName": TIMEZONE,
-        "timezone": TIMEZONE_OFFSET
+        "timezone": new_end_time.strftime('%z')
     }
 
     url = f"{BASE_URL}/timespans/{timespan_id}"
